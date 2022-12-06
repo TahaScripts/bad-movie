@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -15,12 +19,33 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+html {
+  background-color: black;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.body-page {
+  @apply w-screen min-h-screen pt-32;
+}
+
+.container {
+  @apply mx-auto w-full min-h-full;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@200;300;400;500;600&family=Nabla&display=swap');
+
+.text-heading {
+  font-family: 'Alexandria', sans-serif;
+}
+
+.home-button {
+  @apply px-3 py-1 rounded-md border grow text-center whitespace-nowrap block transition-all hover:border-[red] hover:text-[red];
+}
+
+.category-box {
+  @apply aspect-[9/16] relative col-span-1 transition-all hover:scale-105 !cursor-pointer border border-transparent rounded-lg overflow-hidden hover:border-[red];
 }
